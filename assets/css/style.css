@@ -44,7 +44,7 @@ body.dark-theme {
         --color-text-hover: #eeeef1;
         --color-memos-id: #536471;
         --color-img-border: #cfd9de;
-        --color-tag: #2563eb;
+        --color-tag: rgb(22,163,74) ;
         --color-tag-hover: #54a3ff;
         --color-fg-muted: #576061;
         --color-border-default: #d0d7de;
@@ -104,13 +104,13 @@ header {
 }
 
 .pages a {
-    color: var(--color-main);
+    color: rgb(22,163,74) ;
     text-decoration: none;
     margin-left: 1rem;
 }
 
 .pages a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 h1 {
@@ -154,12 +154,12 @@ blockquote {
 }
 
 .memos a {
-    color: var(--color-link);
+    color: rgb(22,163,74) ;
     text-decoration: none;
 }
 
 .memos a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .memos ul {
@@ -191,7 +191,8 @@ blockquote {
 
 .memos__text {
     position: relative;
-    background: var(--color-text-bg);
+    box-sizing: border-box;
+    background: #bbbbbb10;
     padding: 1rem;
     border-radius: 0.5rem;
     font-size: 1rem;
@@ -237,7 +238,7 @@ blockquote {
     height: 14px;
     transform: rotate(45deg);
     border-radius: 3px;
-    background: var(--color-text-bg);
+    background: #bbbbbb10;
     z-index: 1;
 }
 
@@ -286,7 +287,7 @@ blockquote {
     margin-left: 2px;
     max-width: 20px;
     max-height: 20px;
-    color: #1d9bf0;
+    color: rgb(22,163,74) ;
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
@@ -352,6 +353,10 @@ blockquote {
     display: block;
     vertical-align: middle;
     max-width: 100%;
+    height: auto;
+    min-height: 100%;
+    width: auto;
+    min-width: 100%;
     cursor: pointer;
     -o-object-fit: cover;
     object-fit: cover;
@@ -359,6 +364,7 @@ blockquote {
 
 .tag-span {
     color: var(--color-tag);
+    border:1px solid;border-radius:6px;padding:2px 6px;color:rgb(22,163,74) !important;font-size:14px;margin:0 4px;
 }
 
 .tag-span:hover {
@@ -428,12 +434,10 @@ blockquote {
     overflow: hidden;
 }
 
-.post-preview img {
-    height: 210px !important;
-}
-
 .post-preview--image {
     margin: 0 !important;
+    height: 210px !important;
+    width: auto;
     float: right;
     border-radius: 0 !important;
     border-top-right-radius: 2px !important;
@@ -516,7 +520,7 @@ blockquote {
 @media (max-width: 683px) {
 
     body {
-        padding: 45px 50px 45px 20px;
+        padding: 45px 20px;
     }
 
     .menu,
@@ -597,6 +601,9 @@ footer {
     padding: 40px 0;
     text-align: center;
 }
+
+footer a{color:rgb(22,163,74);text-decoration: none;}
+footer img{height:13px}
 
 .hidden {
     display: none !important;
